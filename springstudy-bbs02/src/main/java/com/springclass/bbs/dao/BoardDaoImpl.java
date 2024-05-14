@@ -24,8 +24,7 @@ public class BoardDaoImpl implements BoardDao{
 
 	@Override
 	public Board getBoard(int no) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne(NAME_SPACE+".getBoard",no);
 	}
 
 	@Override

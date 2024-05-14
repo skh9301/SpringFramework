@@ -25,6 +25,9 @@
 	<select id="boardList" resultType="Board" resultMap="boardResultMap">
 		select * from springbbs order by no desc
 	</select>
+	<select id="getBoard" resultType="Board" resultMap="boardResultMap">
+		select * from springbbs where no= #{no}
+	</select>
 
 
 	<resultMap id="boardResultMap" type="Board">
