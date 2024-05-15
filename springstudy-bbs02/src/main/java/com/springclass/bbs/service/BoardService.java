@@ -18,6 +18,6 @@ public interface BoardService {
 	//보드 추가
 	public abstract void insertBoard(Board board);
 	//비번 유효성검사
-	public String isPassCheck(int no , String pass);
+	public boolean isPassCheck(int no , String pass);
 	
 }

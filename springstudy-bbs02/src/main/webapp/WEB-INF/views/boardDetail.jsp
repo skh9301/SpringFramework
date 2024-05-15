@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <div class="row my-5" id="global-content">
 	<div class="col">
 		<form name="checkForm" id="checkForm">
@@ -46,8 +46,17 @@
 							<c:if test="${not empty board.file1 }">
 								<a href="upload/${board.flie1 }">${board.flie1 }</a>
 							</c:if>
+							</td>
+						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
+		<div class="row my-3">
+			<div class="col text-center">
+				<input class="btn btn-warning" type="button" id="detailUpdate" value="수정하기"/>
+				&nbsp;&nbsp;<input class="btn btn-danger" type="button" id="detailDelete" value="삭제하기"/>
+				&nbsp;&nbsp;<input class="btn btn-primary" type="button" value="목록보기" onclick="location.href='boardList'"/>
 			</div>
 		</div>
 	</div>

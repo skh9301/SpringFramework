@@ -22,9 +22,14 @@
 				<input type="text" name="keyword" class="form-control">
 			</div>
 			<div class="col-auto">
-				<input typ="submit" value="검 색" class="btn btn-primary">
+				<input type="submit" value="검 색" class="btn btn-primary">
 			</div>
 		</form>
+		<div class="row">
+			<div class="col text-end">
+				<a href="writeForm" class="btn btn-outline-success">글쓰기</a>
+			</div>
+		</div>
 		<div class="row my-3">
 			<div class="col">
 				<table class="table table-hover">

@@ -7,7 +7,7 @@
 <link href="resources/bootstrap/bootstrap.min.css" rel="stylesheet" >
 <style>
 </style>
-<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/jquery-3.7.1.min.js"></script>
 <script src="resources/js/formcheck.js"></script>
 <title>Insert title here</title>
 </head>

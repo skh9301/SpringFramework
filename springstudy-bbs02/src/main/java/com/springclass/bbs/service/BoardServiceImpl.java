@@ -26,26 +26,27 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public void updateBoard(Board board) {
-		// TODO Auto-generated method stub
-		
+		boardDao.updateBoard(board);
 	}
 
 	@Override
 	public void deleteBoard(int no) {
-		// TODO Auto-generated method stub
-		
+		boardDao.deleteBoard(no);
 	}
 
 	@Override
 	public void insertBoard(Board board) {
-		// TODO Auto-generated method stub
-		
+		boardDao.insertBoard(board);
 	}
 
 	@Override
-	public String isPassCheck(int no, String pass) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean isPassCheck(int no, String pass) {
+		boolean result = false;
+		String dbPass =boardDao.isPassCheck(no, pass);
+		if(dbPass.equals(pass)) {
+			result=true;
+		}
+		return result;
 	}
 
 }

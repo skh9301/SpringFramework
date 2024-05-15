@@ -24,31 +24,28 @@ public class BoardDaoImpl implements BoardDao{
 
 	@Override
 	public Board getBoard(int no) {
+		
 		return sqlSession.selectOne(NAME_SPACE+".getBoard",no);
 	}
 
 	@Override
 	public void updateBoard(Board board) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.update(NAME_SPACE+".updateBoard",board);
 	}
 
 	@Override
 	public void deleteBoard(int no) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.delete(NAME_SPACE+".deleteBoard",no);
 	}
 
 	@Override
 	public void insertBoard(Board board) {
-		// TODO Auto-generated method stub
-		
+		sqlSession.insert(NAME_SPACE+".insertBoard",board);
 	}
 
 	@Override
 	public String isPassCheck(int no, String pass) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne(NAME_SPACE+".isPassCheck", no);
 	}
 
 }
